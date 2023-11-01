@@ -1,6 +1,6 @@
 public class For {
     public static void main(String[] args) {
-        task10();
+        task9();
     }
 
     //    Задача1 Вывести числа от 1 до 10
@@ -73,11 +73,10 @@ public class For {
     //Задача9 в банк под 12% годовых
     public static void task9() {
         int moneyInBank = 29000;
-        int total = 0;
+        float total = 0;
         for (int i = 1; i <= 12; i++) {
-            total += total / 100;
-            total += moneyInBank;
-            System.out.printf("Месяц %d, сумма накоплений равна %d рублей\n", i, total);
+            total = (total + moneyInBank) * 1.01f;
+            System.out.printf("Месяц %d, сумма накоплений равна %.0f рублей\n", i, total);
         }
     }
 
